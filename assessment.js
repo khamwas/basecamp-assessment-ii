@@ -63,11 +63,9 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
-var trueFriends = peopleIknow.filter(item => item.friend==true)
+var trueFriends = peopleIknow.filter(item => item.friend===true)
 
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
-var indexes = randomNumbers.map(function(arr){
-  for(i=0;i<arr.length;i++){indexes.push(i)};
-  return indexes})
+var indexes = randomNumbers.map((element,i)=>element=i)
